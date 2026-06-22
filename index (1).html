@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>It's a Date 💕</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating hearts container -->
+  <div id="hearts-container" aria-hidden="true"></div>
+
+  <!-- Confetti container (screen 4 only) -->
+  <div id="confetti-container" aria-hidden="true"></div>
+
+  <!-- ===================== SCREEN 1 ===================== -->
+  <section class="screen active" id="screen-1">
+    <div class="card card--center">
+      <div class="heart-icon" aria-hidden="true">🤍</div>
+      <h1 class="heading">Will you go on a date<br/>with me?</h1>
+      <p class="subheading">A question worth asking</p>
+      <div class="btn-group btn-group--row">
+        <button class="btn btn--primary ripple" id="btn-yes">Yes</button>
+        <button class="btn btn--outline ripple" id="btn-no">No</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SCREEN 2 ===================== -->
+  <section class="screen" id="screen-2">
+    <div class="card">
+      <h2 class="heading">What are we feeling?</h2>
+      <p class="subheading">Pick one or more</p>
+      <div class="food-grid" id="food-grid">
+        <!-- Injected by JS -->
+      </div>
+      <p class="hint">select what you're craving</p>
+      <button class="btn btn--primary ripple" id="btn-food-continue">Continue</button>
+    </div>
+  </section>
+
+  <!-- ===================== SCREEN 3 ===================== -->
+  <section class="screen" id="screen-3">
+    <div class="card">
+      <div class="icon-top" aria-hidden="true">🕐</div>
+      <h2 class="heading">What time?</h2>
+      <p class="subheading">Choose your hour</p>
+      <div class="time-options" id="time-options">
+        <!-- Injected by JS -->
+      </div>
+      <button class="btn btn--primary ripple" id="btn-time-continue">Continue</button>
+    </div>
+  </section>
+
+  <!-- ===================== SCREEN 4 ===================== -->
+  <section class="screen" id="screen-4">
+    <div class="card card--invitation">
+      <p class="eyebrow">✨ You said yes ✨</p>
+      <h2 class="heading heading--large">It's a date.</h2>
+      <p class="subheading">Something wonderful awaits</p>
+
+      <div class="divider"></div>
+
+      <div class="detail-block">
+        <span class="detail-label">WHEN</span>
+        <p class="detail-value" id="inv-date">Saturday, June 20</p>
+        <p class="detail-value" id="inv-time">7:00 PM</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="detail-block">
+        <span class="detail-label">WHERE</span>
+        <p class="detail-value" id="inv-location"></p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="detail-block">
+        <span class="detail-label">WHAT WE'RE HAVING</span>
+        <p class="detail-value" id="inv-food"></p>
+      </div>
+
+      <div class="divider"></div>
+
+      <blockquote class="quote" id="inv-quote"></blockquote>
+
+      <button class="btn btn--primary ripple" id="btn-calendar">Add To Calendar</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
